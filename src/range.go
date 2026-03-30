@@ -8,5 +8,4 @@ func main() {
 	for _, val := range nums {
 		fmt.Println(val)
 	}
-
 }
