@@ -2,5 +2,6 @@ package main
 import "fmt"
 
 func main(){
-	fmt.Println("Ranjit")
+	fmt.Println("Ranjit");
+	fmt.println("tr")
 }
