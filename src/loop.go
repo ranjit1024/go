@@ -1,11 +1,10 @@
 package main
 
-import "fmt";
+import "fmt"
 
 func main(){
-	i := 0;
-	for i < 3{
+	for i := range 3 {
 		fmt.Println(i);
-		i++
+		i++;
 	}
 }
