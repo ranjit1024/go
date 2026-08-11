@@ -5,10 +5,10 @@ import (
 )
 
 func main() {
-	m := make(map[string]int)
+	fmt.Println("Data is the oil")
+	m := make(map[int]string)
+	m[1] = "ranjit"
 	fmt.Println(m)
-	m["k1"] = 7
-	fmt.Println(m)
-	fmt.Println(m["k1"])
-	fmt.Println("Data is good")
+	a := 12
+	fmt.Println(a)
 }
