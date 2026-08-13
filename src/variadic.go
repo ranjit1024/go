@@ -3,9 +3,9 @@ package main
 import "fmt"
 
 func sum(nums ...int) {
-	fmt.Print(nums)
+	fmt.Println(nums)
 }
 func main() {
-	fmt.Print("Data is kind ")
-	sum(112, 12, 23, 3, 3, 3, 3)
+	fmt.Println("Data")
+	sum(1, 2, 2, 3, 4, 5)
 }
