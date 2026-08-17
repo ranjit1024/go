@@ -12,4 +12,6 @@ func main() {
 	p1 := person{name: "Ranjit", roll_no: 12}
 	fmt.Println(p1)
 
+	fmt.Println(&person{name: "Samriddha", roll_no: 12})
+
 }
