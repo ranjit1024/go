@@ -1,15 +1,15 @@
-package main
+// package main
 
-import "fmt"
+// import "fmt"
 
-type rect struct {
-	width, height int
-}
+// type rect struct {
+// 	width, height int
+// }
 
-func (r rect) area() int {
-	return r.width * r.height
-}
+// func (r rect) area() int {
+// 	return r.width * r.height
+// }
 
-func main() {
-	fmt.Println("Data is the king")
-}
+// func main() {
+// 	fmt.Println("Data is the king")
+// }

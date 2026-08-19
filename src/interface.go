@@ -2,26 +2,29 @@ package main
 
 import "fmt"
 
-type ranjit struct {
-	side int
+type geometry interface {
+	area() float32
+	para() float32
+}
+type rect struct {
+	width, height int
 }
 
-// normal function
-func getSide(r ranjit) string {
-	fmt.Println(r)
-	return "Successful"
+func (r rect) area() float32 {
+	return float32(r.width * r.height)
 }
 
-func (r ranjit) name() string {
-	fmt.Println("Ranjit")
-	return "ranjit"
+func (r rect) para() float32 {
+	return float32(r.height + r.width)
+}
+
+func measure(g geometry) {
+	fmt.Println(g)
+	fmt.Println(g.area())
+	fmt.Println(g.para())
 }
 
 func main() {
 
-	side := ranjit{side: 12}
-	side.name()
-	res := getSide(side)
-	fmt.Println(res)
-
+	fmt.Println("DAta is the king")
 }
