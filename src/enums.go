@@ -6,7 +6,7 @@ type status int
 
 const (
 	Pending status = iota
-	Running status = iota
+	Running
 	Completed
 	Failed
 )
