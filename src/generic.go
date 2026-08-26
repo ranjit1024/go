@@ -2,10 +2,19 @@ package main
 
 import "fmt"
 
-func Add[T int | float64](a T, b T) T {
-	return a + b
+type Names []string
+
+func SliceIndex[E comparable](s []E, v E) int {
+	for i := range s {
+		if v == s[i] {
+			return i
+		}
+	}
+	return -1
 }
+
 func main() {
-	a := Add(12, 12.4)
-	fmt.Println(a)
+	var names Names
+	fmt.Println(names)
+	SliceIndex([]string{"ranjit", "rahul"}, "ranjit")
 }
