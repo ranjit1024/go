@@ -1,13 +1,11 @@
 package main
 
-import "fmt"
-
-func doSomething(f func(int)) {
-	f(10)
+func count(yield func(int) bool) {
+	yield(1)
+	yield(2)
+	yield(3)
 }
 
 func main() {
-	doSomething(func(i int) {
-		fmt.Println(i)
-	})
+	data := count()
 }
