@@ -1,5 +1,7 @@
 package main
 
+import "fmt"
+
 func count(yield func(int) bool) {
 	yield(1)
 	yield(2)
@@ -7,5 +9,10 @@ func count(yield func(int) bool) {
 }
 
 func main() {
-	data := count()
+
+	x := count(func(i int) bool {
+		return true
+	})
+	fmt.Println(x)
+	fmt.Println("Data is the oil")
 }
