@@ -3,16 +3,16 @@ package main
 import "fmt"
 
 func count(yield func(int) bool) {
-	yield(1)
-	yield(2)
-	yield(3)
+	for i := 1; i <= 5; i++ {
+		if !yield(i) {
+			return
+		}
+	}
 }
 
 func main() {
-
-	x := count(func(i int) bool {
+	count(func(i int) bool {
+		fmt.Println(i)
 		return true
 	})
-	fmt.Println(x)
-	fmt.Println("Data is the oil")
 }
