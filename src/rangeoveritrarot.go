@@ -11,8 +11,10 @@ func count(yield func(int) bool) {
 }
 
 func main() {
+	for x := range count {
+		fmt.Println(x)
+	}
 	count(func(i int) bool {
-		fmt.Println(i)
 		return true
 	})
 }
