@@ -9,8 +9,6 @@ func devide(a, b int) (int, error) {
 	return a / b, nil
 }
 func main() {
-	result, err := devide(10, 0)
-	fmt.Println(result)
-	fmt.Println(err)
-	fmt.Println("Data is the oil")
+	var x = 12
+	fmt.Println(x)
 }
