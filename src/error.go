@@ -8,7 +8,10 @@ func devide(a, b int) (int, error) {
 	}
 	return a / b, nil
 }
+
 func main() {
-	var x = 12
+	var x int = 0
+	var p *int = nil
+	fmt.Println(p)
 	fmt.Println(x)
 }
