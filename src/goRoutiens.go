@@ -1,12 +1,23 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"sync"
+	"time"
+)
 
-func data(from string) {
-	for i := range 10 {
-		fmt.Println(i)
-	}
+func worker(id int) {
+	fmt.Printf("Worker %d starting \n", id)
+	time.Sleep(time.Second)
+	fmt.Printf("Worker %d done \n", id)
 }
+
 func main() {
-	fmt.Println("Data is the king")
+	var wg sync.WaitGroup
+	for i := 0; i <= 4; i++ {
+		wg.Go(func() {
+			worker(i)
+		})
+	}
+	wg.Wait()
 }
