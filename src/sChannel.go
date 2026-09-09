@@ -16,4 +16,5 @@ func worker1(done chan bool) {
 func main() {
 	done := make(chan bool, 1)
 	go worker1(done)
+	<-done
 }
