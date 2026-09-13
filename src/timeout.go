@@ -19,5 +19,4 @@ func main() {
 	case <-time.After(2 * time.Second):
 		fmt.Println("Timeout 1")
 	}
-	c1 <- "Resume 1"
 }
