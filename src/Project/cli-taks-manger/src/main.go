@@ -2,9 +2,13 @@ package main
 
 import (
 	"fmt"
-	"os"
 )
 
+type task struct {
+	task     string
+	complted bool
+}
+
 func main() {
-	fmt.Println("First arag", os.Args[1], os.Args[2])
+	fmt.Println("Data is the king")
 }
