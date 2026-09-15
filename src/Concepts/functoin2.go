@@ -6,7 +6,7 @@ func test() (int, int) {
 	return 12, 24
 }
 
-func main() {
+func demoMultipleReturns() {
 	fmt.Println("Date is the king")
 	a, b := test()
 	fmt.Println(a)

@@ -12,7 +12,7 @@ type Employee struct {
 	person1
 }
 
-func main() {
+func demoStructEmbedding() {
 	fmt.Println("Data is the king")
 	ranjit := person1{
 		name: "Ranjit",

@@ -1,6 +1,6 @@
 package main
 
-func main() {
+func demoTest() {
 	marks := make([]int, 0)
 	marks = append(marks, 12)
 

@@ -7,7 +7,7 @@ type person struct {
 	roll_no int
 }
 
-func main() {
+func demoStructs() {
 	fmt.Println("Data is the king")
 	p1 := person{name: "Ranjit", roll_no: 12}
 	fmt.Println(p1)

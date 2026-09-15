@@ -21,7 +21,7 @@ func add(a, b int) (int, error) {
 	return a + b, nil
 }
 
-func main() {
+func demoOperations() {
 	fmt.Println("Data is the oil")
 	result, err := add(12, 12)
 	fmt.Println(result)

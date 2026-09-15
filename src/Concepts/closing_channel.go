@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func main() {
+func demoClosingChannels() {
 	jobs := make(chan int, 5)
 	done := make(chan bool)
 

@@ -1,7 +1,7 @@
 package main
 import "fmt"
 
-func main(){
+func demoSwitch() {
 	i := 2;
 	fmt.Println("Write", i , " as ");
 	switch i {

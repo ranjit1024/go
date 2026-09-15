@@ -2,10 +2,10 @@ package main
 
 import "fmt"
 
-func sum(nums ...int) {
+func variadicSum(nums ...int) {
 	fmt.Println(nums)
 }
-func main() {
+func demoVariadic() {
 	fmt.Println("Data")
-	sum(1, 2, 2, 3, 4, 5)
+	variadicSum(1, 2, 2, 3, 4, 5)
 }

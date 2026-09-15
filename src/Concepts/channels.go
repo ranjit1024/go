@@ -22,7 +22,7 @@ func square(in <-chan int, out chan<- int) {
 	}
 	close(out)
 }
-func main() {
+func demoChannelPipelines() {
 	fmt.Println("Data is the king ")
 	input := make(chan int)
 	stage1 := make(chan int)

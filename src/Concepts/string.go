@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func main() {
+func demoStrings() {
 	s := "A世😀"
 	fmt.Println(len(s))
 	fmt.Println(len([]rune(s)))

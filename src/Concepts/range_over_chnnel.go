@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func main() {
+func demoRangeOverChannel() {
 	queue := make(chan string, 2)
 	queue <- "Ranjit"
 	queue <- "Sammmu"

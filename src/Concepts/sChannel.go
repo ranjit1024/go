@@ -12,7 +12,7 @@ func worker1(done chan bool) {
 
 	done <- true
 }
-func main() {
+func demoChannelSync() {
 	done := make(chan bool, 1)
 	go worker1(done)
 	<-done

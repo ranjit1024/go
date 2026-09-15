@@ -18,12 +18,9 @@ func f(arg int) (int, error) {
 
 	return arg + 3, nil
 }
-func main() {
-	var a int
+func demoCustomErrors() {
 	_, err := f(42)
 	fmt.Println(err)
-	fmt.Scanf("%d", &a)
-	fmt.Println(a)
 
 	fmt.Println("Data is the king")
 }

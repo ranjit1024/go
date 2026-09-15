@@ -20,7 +20,7 @@ func (lst *List[T]) Push(v T) {
 	}
 }
 
-func main() {
+func demoRangeIterator() {
 	lst := List[int]{}
 	fmt.Println(lst)
 	lst.Push(12)

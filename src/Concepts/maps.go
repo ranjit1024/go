@@ -4,7 +4,7 @@ import (
 	"fmt"
 )
 
-func main() {
+func demoMaps() {
 	m := make(map[int]string)
 	marks := make([]int, 4, 10)
 	fmt.Println(marks)

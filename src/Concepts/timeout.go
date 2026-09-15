@@ -5,7 +5,7 @@ import (
 	"time"
 )
 
-func main() {
+func demoTimeouts() {
 
 	c1 := make(chan string, 1)
 	go func() {

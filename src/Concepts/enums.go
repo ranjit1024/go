@@ -11,7 +11,7 @@ const (
 	Failed
 )
 
-func main() {
+func demoEnums() {
 	fmt.Println("fadsfa")
-	fmt.Println(s)
+	fmt.Println(Pending, Running, Completed, Failed)
 }

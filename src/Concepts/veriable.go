@@ -1,7 +1,7 @@
 package main
 import "fmt"
 
-func main(){
+func demoVariables() {
 	a := 12;
 	fmt.Println(a);
 }

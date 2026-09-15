@@ -10,7 +10,7 @@ func zeroPtr(iptr *int) {
 	*iptr = 0
 }
 
-func main() {
+func demoPointers() {
 	i := 1
 	zeroveal(i)
 	zeroPtr(&i)

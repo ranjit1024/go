@@ -12,12 +12,14 @@ func worker(id int) {
 	fmt.Printf("Worker %d done \n", id)
 }
 
-func main() {
+func demoGoroutines() {
 	var wg sync.WaitGroup
 	for i := 0; i <= 4; i++ {
-		wg.Go(func() {
-			worker(i)
-		})
+		wg.Add(1)
+		go func(id int) {
+			defer wg.Done()
+			worker(id)
+		}(i)
 	}
 	wg.Wait()
 }

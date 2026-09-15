@@ -17,3 +17,11 @@ func Sum(a, b int) (int, error) {
 	}
 	return a + b, nil
 }
+
+func demoSum() {
+	result, err := Sum(12, 31)
+	fmt.Println("Sum(12, 31) ->", result, err)
+
+	result, err = Sum(12, 0)
+	fmt.Println("Sum(12, 0) ->", result, err)
+}

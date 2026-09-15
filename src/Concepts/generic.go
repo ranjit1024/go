@@ -13,7 +13,7 @@ func SliceIndex[E comparable](s []E, v E) int {
 	return -1
 }
 
-func main() {
+func demoGenerics() {
 	var names Names
 	fmt.Println(names)
 	SliceIndex([]string{"ranjit", "rahul"}, "ranjit")

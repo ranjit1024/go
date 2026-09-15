@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func main() {
+func demoNonBlocking() {
 	message := make(chan string)
 	// signals := make(chan string)
 

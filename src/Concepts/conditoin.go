@@ -1,6 +1,6 @@
 package main
 import "fmt"
-func main(){
+func demoConditional() {
 	fmt.Println("Hello World");
 	if 7 % 2 == 0{
 		fmt.Println("not a even")

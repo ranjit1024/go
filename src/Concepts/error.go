@@ -9,7 +9,7 @@ func devide(a, b int) (int, error) {
 	return a / b, nil
 }
 
-func main() {
+func demoErrors() {
 	var x int = 0
 	var p *int = nil
 	fmt.Println(p)

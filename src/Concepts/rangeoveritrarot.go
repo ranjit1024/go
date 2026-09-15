@@ -10,7 +10,7 @@ func count(yield func(int) bool) {
 	}
 }
 
-func main() {
+func demoRangeFunc() {
 	for x := range count {
 		fmt.Println(x)
 	}

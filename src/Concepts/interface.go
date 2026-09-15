@@ -12,7 +12,7 @@ type rect struct {
 func (r rect) area() int {
 	return r.height * r.widht
 }
-func main() {
+func demoInterfaces() {
 	sqare := rect{
 		height: 12,
 		widht:  12,

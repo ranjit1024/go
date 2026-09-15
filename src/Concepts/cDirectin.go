@@ -11,7 +11,7 @@ func pong(pings <-chan string, pongs chan<- string) {
 	fmt.Println(<-pings)
 }
 
-func main() {
+func demoChannelDirections() {
 	pings := make(chan string, 1)
 	pongs := make(chan string, 1)
 	ping(pings, "Passed message")
