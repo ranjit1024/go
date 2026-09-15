@@ -1,9 +1,10 @@
 package main
+
 import "fmt"
 
-func demoLoops() {
+func loop() {
 	for i := range 3 {
-		fmt.Println(i);
+		fmt.Println(i)
 		i++
 	}
 }
