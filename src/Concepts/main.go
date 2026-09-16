@@ -4,6 +4,6 @@ import "fmt"
 
 func main() {
 	fmt.Println("--------------Start--------------------")
-	demoMaps()
+	tickerDemo()
 	fmt.Println("--------------Main go End-----------------")
 }
