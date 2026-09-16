@@ -21,7 +21,7 @@ func tickerDemo() {
 		}
 	}()
 
-	time.Sleep(1600 * time.Millisecond)
+	time.Sleep(2000 * time.Millisecond)
 	ticker1.Stop()
 	done <- true
 	fmt.Println("Timr Stoped")
