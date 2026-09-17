@@ -13,6 +13,7 @@ func worker(id int, jobs <-chan int, results chan int) {
 		results <- j * 2
 	}
 }
+
 func worker_pull() {
 	const numJobs = 5
 	jobs := make(chan int, numJobs)
