@@ -6,7 +6,7 @@ import (
 	"time"
 )
 
-func worker(id int) {
+func worker_(id int) {
 	fmt.Printf("Worker %d starting \n", id)
 	time.Sleep(time.Second)
 	fmt.Printf("Worker %d done \n", id)
@@ -18,7 +18,7 @@ func demoGoroutines() {
 		wg.Add(1)
 		go func(id int) {
 			defer wg.Done()
-			worker(id)
+			worker_(id)
 		}(i)
 	}
 	wg.Wait()

@@ -4,6 +4,6 @@ import "fmt"
 
 func main() {
 	fmt.Println("--------------Start--------------------")
-	tickerDemo()
+	worker_pull()
 	fmt.Println("--------------Main go End-----------------")
 }
