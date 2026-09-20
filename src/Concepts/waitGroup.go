@@ -20,7 +20,6 @@ func demo_waitgroups() {
 			worker_1(i)
 		})
 	}
-
-	wg.Wait()
+	time.Sleep(time.Second)
 
 }
