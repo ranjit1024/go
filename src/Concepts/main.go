@@ -4,6 +4,6 @@ import "fmt"
 
 func main() {
 	fmt.Println("--------------Start--------------------")
-	worker_pull()
+	demo_waitgroups()
 	fmt.Println("--------------Main go End-----------------")
 }
