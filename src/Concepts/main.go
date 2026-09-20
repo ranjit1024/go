@@ -4,6 +4,6 @@ import "fmt"
 
 func main() {
 	fmt.Println("--------------Start--------------------")
-	demo_waitgroups()
+	demo_rateLimiter()
 	fmt.Println("--------------Main go End-----------------")
 }
