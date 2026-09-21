@@ -53,4 +53,21 @@ func demo_statefulgoroutine() {
 		}()
 	}
 
+	for range 10 {
+		go func() {
+			for {
+				write := writeOp{
+					key:  rand.Intn(5),
+					val:  rand.Intn(100),
+					resp: make(chan bool),
+				}
+				writes <- write
+				<-write.resp
+				time.Sleep(time.Millisecond)
+			}
+		}()
+	}
+
+	time.Sleep(time.Second)
+
 }
