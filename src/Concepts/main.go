@@ -4,6 +4,6 @@ import "fmt"
 
 func main() {
 	fmt.Println("--------------Start--------------------")
-	demo_mutex()
+	demo_statefulgoroutine()
 	fmt.Println("--------------Main go End-----------------")
 }
