@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"math/rand"
 	"sync/atomic"
 	"time"
@@ -11,16 +10,16 @@ type readOp struct {
 	key  int
 	resp chan int
 }
+
 type writeOp struct {
 	key  int
 	val  int
 	resp chan bool
 }
 
-func demo_stateful_gorountin() {
+func demo_statefulgoroutine() {
 
 	var readOps uint64
-	var writeOps uint64
 
 	reads := make(chan readOp)
 	writes := make(chan writeOp)
@@ -35,6 +34,7 @@ func demo_stateful_gorountin() {
 				state[write.key] = write.val
 				write.resp <- true
 			}
+
 		}
 	}()
 
@@ -42,8 +42,9 @@ func demo_stateful_gorountin() {
 		go func() {
 			for {
 				read := readOp{
-					key:  rand.Intn(5),
-					resp: make(chan int)}
+					key:  rand.Int(),
+					resp: make(chan int),
+				}
 				reads <- read
 				<-read.resp
 				atomic.AddUint64(&readOps, 1)
@@ -52,25 +53,4 @@ func demo_stateful_gorountin() {
 		}()
 	}
 
-	for range 10 {
-		go func() {
-			for {
-				write := writeOp{
-					key:  rand.Intn(5),
-					val:  rand.Intn(100),
-					resp: make(chan bool)}
-				writes <- write
-				<-write.resp
-				atomic.AddUint64(&writeOps, 1)
-				time.Sleep(time.Millisecond)
-			}
-		}()
-	}
-
-	time.Sleep(time.Second)
-
-	readOpsFinal := atomic.LoadUint64(&readOps)
-	fmt.Println("readOps:", readOpsFinal)
-	writeOpsFinal := atomic.LoadUint64(&writeOps)
-	fmt.Println("writeOps:", writeOpsFinal)
 }
