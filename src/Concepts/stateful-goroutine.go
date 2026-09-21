@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"math/rand"
 	"sync/atomic"
 	"time"
@@ -20,6 +21,7 @@ type writeOp struct {
 func demo_statefulgoroutine() {
 
 	var readOps uint64
+	var writeOps uint64
 
 	reads := make(chan readOp)
 	writes := make(chan writeOp)
@@ -63,11 +65,16 @@ func demo_statefulgoroutine() {
 				}
 				writes <- write
 				<-write.resp
+				atomic.AddUint64(&writeOps, 1)
 				time.Sleep(time.Millisecond)
 			}
 		}()
 	}
 
 	time.Sleep(time.Second)
+	readOpsFinal := atomic.LoadUint64(&readOps)
+	fmt.Println("Read ops", readOpsFinal)
+	writeOpsFinal := atomic.LoadUint64(&writeOps)
+	fmt.Println("Write ops", writeOpsFinal)
 
 }
