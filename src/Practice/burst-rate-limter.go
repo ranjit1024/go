@@ -5,7 +5,7 @@ import (
 	"time"
 )
 
-func main() {
+func brust_limit() {
 	jobs := make(chan int, 10)
 	for i := range 10 {
 		jobs <- i
