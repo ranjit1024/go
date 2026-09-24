@@ -7,7 +7,7 @@ import (
 // / stuende grade analuzer
 func first() {
 	scores := []int{56, 99, 34, 23, 90, 34}
-	fmt.Println(scores)
+	
 	h_n := scores[0]
 	l_n := scores[0]
 
