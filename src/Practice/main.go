@@ -4,6 +4,6 @@ import "fmt"
 
 func main() {
 	fmt.Println("---------------- Main ---------------------")
-	first()
+	Second()
 	fmt.Println("-------------------End-------------------------")
 }
