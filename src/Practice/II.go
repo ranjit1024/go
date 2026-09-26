@@ -9,10 +9,12 @@ func countWords(text string) map[string]int {
 	res := make(map[string]int)
 	words := strings.Split(text, " ")
 	fmt.Println(words)
+
 	for i := range len(words) {
 		word := words[i]
 		res[word]++
 	}
+
 	fmt.Println(res)
 	return res
 }
