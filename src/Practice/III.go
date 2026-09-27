@@ -40,6 +40,9 @@ func III() {
 	acc1.deposite(1000)
 	fmt.Println(acc1.GetBalance())
 	with_draw := acc1.WithDraw(100000)
-	fmt.Println(with_draw)
-	fmt.Println("Data is the key")
+	if with_draw != nil {
+		fmt.Println("withDraw failed ")
+	} else {
+		fmt.Println("Withdrawl successful")
+	}
 }
