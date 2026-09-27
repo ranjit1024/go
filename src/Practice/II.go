@@ -14,7 +14,6 @@ func countWords(text string) map[string]int {
 		word := words[i]
 		res[word]++
 	}
-
 	fmt.Println(res)
 	return res
 }
