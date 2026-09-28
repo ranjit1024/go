@@ -14,10 +14,12 @@ type Account struct {
 }
 
 func (a *Account) deposite(amount int) int {
+
+	fmt.Println("Update", a.Balance, "+", amount, "--------->", a.Balance+amount)
 	a.Balance = a.Balance + amount
+
 	return a.Balance
 }
-
 func (a *Account) WithDraw(amount int) error {
 	if a.Balance < amount {
 		return notSufficentBalnce
@@ -35,14 +37,12 @@ func III() {
 	acc1 := Account{
 		Id:      1,
 		Name:    "Ranjit",
-		Balance: 40000,
+		Balance: 0,
 	}
-	acc1.deposite(1000)
-	fmt.Println(acc1.GetBalance())
-	with_draw := acc1.WithDraw(100000)
-	if with_draw != nil {
-		fmt.Println("withDraw failed ")
-	} else {
-		fmt.Println("Withdrawl successful")
+	for i := range 100 {
+		fmt.Println(i)
+		go acc1.deposite(10)
 	}
+
+	fmt.Println("Currunet Balance ", acc1.Balance)
 }
