@@ -3,6 +3,7 @@ package main
 import (
 	"errors"
 	"fmt"
+	"sync"
 )
 
 var notSufficentBalnce = errors.New("No sufficent balcnace")
@@ -11,16 +12,19 @@ type Account struct {
 	Id      int
 	Name    string
 	Balance int
+	mu      sync.Mutex
 }
 
 func (a *Account) deposite(amount int) int {
-
+	a.mu.Lock()
+	defer a.mu.Unlock()
 	fmt.Println("Update", a.Balance, "+", amount, "--------->", a.Balance+amount)
 	a.Balance = a.Balance + amount
-
 	return a.Balance
 }
 func (a *Account) WithDraw(amount int) error {
+	a.mu.Lock()
+	defer a.mu.Unlock()
 	if a.Balance < amount {
 		return notSufficentBalnce
 	} else {
@@ -30,6 +34,8 @@ func (a *Account) WithDraw(amount int) error {
 }
 
 func (a *Account) GetBalance() int {
+	a.mu.Lock()
+	defer a.mu.Unlock()
 	return a.Balance
 }
 
