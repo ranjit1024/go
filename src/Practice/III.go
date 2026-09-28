@@ -25,6 +25,7 @@ func (a *Account) deposite(amount int) int {
 func (a *Account) WithDraw(amount int) error {
 	a.mu.Lock()
 	defer a.mu.Unlock()
+	fmt.Println("Update", a.Balance, "-", amount, "--------->", a.Balance-amount)
 	if a.Balance < amount {
 		return notSufficentBalnce
 	} else {
@@ -46,16 +47,29 @@ func III() {
 		Balance: 0,
 	}
 	var wg sync.WaitGroup
-
+	var withdraw_waitgroup sync.WaitGroup
 	for i := range 100 {
 		fmt.Println(i)
 		wg.Add(1)
 		go func() {
 			defer wg.Done()
-			acc1.deposite(10)
+			acc1.deposite(100)
+
 		}()
 	}
 	wg.Wait()
 
+	for j := range 200 {
+		fmt.Println(j)
+		withdraw_waitgroup.Add(1)
+		go func() {
+			defer withdraw_waitgroup.Done()
+			withdraw := acc1.WithDraw(100)
+			if withdraw != nil {
+				fmt.Println("Withdraw failed")
+			}
+		}()
+	}
+	withdraw_waitgroup.Wait()
 	fmt.Println("Currunet Balance ", acc1.Balance)
 }
