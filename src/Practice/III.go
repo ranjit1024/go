@@ -45,10 +45,17 @@ func III() {
 		Name:    "Ranjit",
 		Balance: 0,
 	}
+	var wg sync.WaitGroup
+
 	for i := range 100 {
 		fmt.Println(i)
-		go acc1.deposite(10)
+		wg.Add(1)
+		go func() {
+			defer wg.Done()
+			acc1.deposite(10)
+		}()
 	}
+	wg.Wait()
 
 	fmt.Println("Currunet Balance ", acc1.Balance)
 }
