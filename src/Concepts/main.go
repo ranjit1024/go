@@ -4,6 +4,6 @@ import "fmt"
 
 func main() {
 	fmt.Println("--------------Start--------------------")
-	demo_sort()
+	state_goroutine()
 	fmt.Println("--------------Main go End-----------------")
 }
