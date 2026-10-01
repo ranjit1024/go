@@ -56,6 +56,22 @@ func state_goroutine() {
 		}()
 	}
 
+	for range 10 {
+		go func() {
+			for {
+				write := writeOp{
+					key:  rand.Intn(5),
+					val:  rand.Intn(100),
+					resp: make(chan bool)}
+
+				writes <- write
+				<-write.resp
+				atomic.AddUint64(&writeOps, 1)
+				time.Sleep(time.Millisecond)
+			}
+		}()
+	}
+
 	fmt.Println("Data is the oil")
 
 }
