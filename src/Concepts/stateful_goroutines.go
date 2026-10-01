@@ -19,7 +19,6 @@ type writeOp struct {
 }
 
 func state_goroutine() {
-	var readOps uint64
 	var writeOps uint64
 
 	reads := make(chan readOp)
