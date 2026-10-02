@@ -20,6 +20,7 @@ type writeOp struct {
 
 func state_goroutine() {
 	var writeOps uint64
+	var readOps uint64
 
 	reads := make(chan readOp)
 	writes := make(chan writeOp)
@@ -71,7 +72,11 @@ func state_goroutine() {
 			}
 		}()
 	}
-
+	time.Sleep(time.Second)
+	readOpsFinal := atomic.LoadUint64(&readOps)
+	fmt.Println("ReadOps", readOpsFinal)
+	writeOpsFianl := atomic.LoadUint64(&writeOps)
+	fmt.Println("WriteOps", writeOpsFianl)
 	fmt.Println("Data is the oil")
 
 }
