@@ -7,11 +7,11 @@ import (
 )
 
 func sorting_by_funcion() {
-	fmt.Println("Data is the key")
-	fruits := []string{"peach", "banana", "kiwi"}
-	lencp := func(a, b string) int {
+	fruits := []string{"Peaach", "banaana", "apple", "Watermelon"}
+	lenCmp := func(a, b string) int {
 		return cmp.Compare(len(a), len(b))
 	}
-	slices.SortFunc(fruits, lencp)
+	slices.SortFunc(fruits, lenCmp)
 	fmt.Println(fruits)
+
 }
