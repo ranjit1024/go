@@ -4,6 +4,6 @@ import "fmt"
 
 func main() {
 	fmt.Println("--------------Start--------------------")
-	sorting_by_funcion()
+	panic_demo()
 	fmt.Println("--------------Main go End-----------------")
 }
