@@ -18,6 +18,29 @@ var stateName = map[ServerState]string{
 	StateRetrying: "Retry",
 }
 
+func (ss ServerState) String() string {
+	return stateName[ss]
+}
+
 func enum_demo() {
-	fmt.Println("Data is the king")
+	ns := transition(StateIdle)
+	fmt.Println(ns)
+
+	ns2 := transition(ns)
+
+	fmt.Println(ns2)
+}
+
+func transition(s ServerState) ServerState {
+	switch s {
+	case StateIdle:
+		return StateConneted
+	case StateConneted, StateRetrying:
+		return StateIdle
+	case StateError:
+		return StateError
+	default:
+		panic(fmt.Errorf("Unknow state %s", s))
+	}
+
 }
