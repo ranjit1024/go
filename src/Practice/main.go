@@ -4,6 +4,6 @@ import "fmt"
 
 func main() {
 	fmt.Println("---------------- Main ---------------------")
-	interface_demo()
+	enum_demo()
 	fmt.Println("-------------------End-------------------------")
 }
