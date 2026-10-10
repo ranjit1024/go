@@ -4,6 +4,6 @@ import "fmt"
 
 func main() {
 	fmt.Println("---------------- Main ---------------------")
-	demo_struct_embeding()
+	demo_generics()
 	fmt.Println("-------------------End-------------------------")
 }
