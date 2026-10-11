@@ -4,6 +4,6 @@ import "fmt"
 
 func main() {
 	fmt.Println("---------------- Main ---------------------")
-	demo_generics()
+	demo_range_over_itarator()
 	fmt.Println("-------------------End-------------------------")
 }
