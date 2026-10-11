@@ -11,3 +11,10 @@ now if we have two differect struct where both have a area function then we have
 
 
 -> any type that implements all the metod reqired by an intreface automatically satisfy intreface 
+
+## Range over Itarator
+-> the prbolem is that think like that we can range where we consume an array but what if we do sometng we have an slices and then teh use rage 
+what if we have a function that can produce a number on the fly and and pass to the range loop body
+
+for that we have someting called as `iter.Seq[int]` this is return type of funciton 
+`yeild()` this is the actutl callback function that deliver the nums to the range to indecate that is it do we still need to continue or not
