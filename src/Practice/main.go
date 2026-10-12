@@ -4,6 +4,6 @@ import "fmt"
 
 func main() {
 	fmt.Println("---------------- Main ---------------------")
-	demo_range_over_itarator()
+	error_demo()
 	fmt.Println("-------------------End-------------------------")
 }
