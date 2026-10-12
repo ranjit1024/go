@@ -4,6 +4,6 @@ import "fmt"
 
 func main() {
 	fmt.Println("---------------- Main ---------------------")
-	error_demo()
+	custom_error()
 	fmt.Println("-------------------End-------------------------")
 }
