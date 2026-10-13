@@ -4,6 +4,6 @@ import "fmt"
 
 func main() {
 	fmt.Println("---------------- Main ---------------------")
-	custom_error()
+	demo_goroutine()
 	fmt.Println("-------------------End-------------------------")
 }
