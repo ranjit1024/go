@@ -9,19 +9,26 @@ type divError struct{
 	message string
 }
 
-func (d *divError) String() string{
-	fmt.Sprintf("%d - %s", d.num, d.message)
+func (d *divError) Error() string{
+	return fmt.Sprintf("%d - %s", d.num, d.message)
 }
 
 func div( a, b int) (int, error){
 	if b == 0 {
 		return -1, &divError{
-			num:0,
-			message:"Can not devide with 0"
+			num: 0,
+			message:"Can not devide with 0",
 		}
 	}
 	return a / b, nil
 }
-func main(){
+
+func custom_error(){
+	_ , err := div(12,0)
+	var ae *divError
+	if errors.As(err, &ae){
+		fmt.Println(ae.num)
+		fmt.Println(ae.message)
+	}
 	fmt.Println("Hello World...")
 }
