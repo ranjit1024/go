@@ -4,6 +4,6 @@ import "fmt"
 
 func main() {
 	fmt.Println("---------------- Main ---------------------")
-	demo_goroutine()
+	demo_channel()
 	fmt.Println("-------------------End-------------------------")
 }
