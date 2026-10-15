@@ -13,7 +13,6 @@ func pong(pings <-chan string, pongs chan<- string) {
 func demo_channel_direction() {
 	pings := make(chan string)
 	pongs := make(chan string)
-
 	ping(pings, "Message passed")
 	pong(pings, pongs)
 	fmt.Println("Hello World..")
