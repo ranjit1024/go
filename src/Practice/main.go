@@ -4,6 +4,6 @@ import "fmt"
 
 func main() {
 	fmt.Println("---------------- Main ---------------------")
-	demo_channel_direction()
+	select_demo()
 	fmt.Println("-------------------End-------------------------")
 }
