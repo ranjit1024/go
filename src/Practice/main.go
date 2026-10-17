@@ -4,6 +4,6 @@ import "fmt"
 
 func main() {
 	fmt.Println("---------------- Main ---------------------")
-	select_demo()
+	demo_timeout()
 	fmt.Println("-------------------End-------------------------")
 }
