@@ -4,6 +4,6 @@ import "fmt"
 
 func main() {
 	fmt.Println("---------------- Main ---------------------")
-	demo_timeout()
+	demo_non_blocking_channel()
 	fmt.Println("-------------------End-------------------------")
 }

@@ -18,3 +18,20 @@ what if we have a function that can produce a number on the fly and and pass to 
 
 for that we have someting called as `iter.Seq[int]` this is return type of funciton 
 `yeild()` this is the actutl callback function that deliver the nums to the range to indecate that is it do we still need to continue or not
+
+## Go Timeout 
+if we dont receive a some data from channel for certain time then we do print timeout 
+
+```go
+ch1 := make(chan string, 1)
+go func(){
+    time.Sleep(2 * time.Second)
+    ch1 <- "Data"
+}()
+select{
+case msg := <- ch1:
+    fmt.Prinln(msg)
+case <- time.After(1 * time.Second):
+    fmt.Prinln("Timeout")
+}
+```
