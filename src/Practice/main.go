@@ -4,6 +4,6 @@ import "fmt"
 
 func main() {
 	fmt.Println("---------------- Main ---------------------")
-	demo_non_blocking_channel()
+	demo_closing_chan()
 	fmt.Println("-------------------End-------------------------")
 }
