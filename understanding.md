@@ -35,3 +35,5 @@ case <- time.After(1 * time.Second):
     fmt.Prinln("Timeout")
 }
 ```
+## Go Timer
+go timer is used to perform after certain time taht timer will be expire and the notification send to the channel
