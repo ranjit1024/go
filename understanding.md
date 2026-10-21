@@ -37,3 +37,13 @@ case <- time.After(1 * time.Second):
 ```
 ## Go Timer
 go timer is used to perform after certain time taht timer will be expire and the notification send to the channel
+```go
+import (
+    "fmt",
+    "time"
+)
+func main(){
+    timer1 := time.NewTimer(2 * time.Second)
+    <- timer1.C;
+}
+```
