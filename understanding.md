@@ -47,3 +47,25 @@ func main(){
     <- timer1.C;
 }
 ```
+## Go Ticker 
+>ticker  := time.NewTicker(500* time.Millisecond)
+
+this is the way of creating ticker 
+and sending to the channel and then we can react on it
+```go
+import  ("fmt", "time")
+func main(){
+    ticker := time.NewTicker(500* time.Millisecond)
+    time.Sleep(500 * time.Millisecond)
+    go func(){
+    for{
+        select{
+        case <- done:
+            return
+        case t := <- ticker.C:
+            fmt.Println(t)
+        }
+    }     
+}()
+}
+```
