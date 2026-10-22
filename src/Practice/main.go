@@ -4,6 +4,6 @@ import "fmt"
 
 func main() {
 	fmt.Println("---------------- Main ---------------------")
-	demo_tikcer()
+	demo_worker_pool()
 	fmt.Println("-------------------End-------------------------")
 }
