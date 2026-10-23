@@ -67,10 +67,16 @@ func main(){
         }
     }     
 }()
-}```
+}
+```
 
-Hii Sammmmmu
-theres something I want to tell you and Im a little nervous You have become really special to me.
-I started by just enjoying working and talking with you and somewhere along the way I fell for you. 
-I know you have been through a lot recently so please donnt feel any pressure to answer now.
-Take all the time you need Whatever you feel youre my friend first and that wont change....
+## Go WaitGroups
+
+what is the way to understand how can we track which goroutuines are running and which one finished the way to do it by use waitGroups
+
+```go
+var wg sync.WaitGroups
+wg.add(1);
+wg.wait();
+wg.done();
+```
