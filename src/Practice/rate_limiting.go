@@ -7,6 +7,7 @@ import (
 
 func rate_limter() {
 	requests := make(chan int, 5)
+
 	for i := 1; i <= 5; i++ {
 		requests <- i
 	}
@@ -19,6 +20,7 @@ func rate_limter() {
 		<-limiter
 		fmt.Println("Req", req, time.Now())
 	}
+
 	brustyLimiter := make(chan time.Time, 3)
 
 	for range 3 {
@@ -32,8 +34,10 @@ func rate_limter() {
 	}()
 
 	brustyRequest := make(chan int, 5)
+
 	for i := 1; i <= 5; i++ {
 		brustyRequest <- i
 	}
+
 	fmt.Println("Hello World")
 }
