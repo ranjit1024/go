@@ -80,3 +80,23 @@ wg.add(1);
 wg.wait();
 wg.done();
 ```
+
+## Go rate limiter 
+go rate limiter is not some concept it is thing that we build by using Timer.tick()
+
+```go
+package main
+import "fmt"
+func main(){
+    const a := make(chan int);
+    for i:= 1; i<=5; i++{
+        a <- i;
+    }
+    limiter := time.Tick(200 * time.MilliSecond)
+
+    for req := range a{
+        <- limiter;
+        fmr.Println("Req",  req, time.Now());
+    }
+}
+```
