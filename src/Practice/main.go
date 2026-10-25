@@ -4,6 +4,6 @@ import "fmt"
 
 func main() {
 	fmt.Println("---------------- Main ---------------------")
-	rate_limter()
+	Demo_automic_counter()
 	fmt.Println("-------------------End-------------------------")
 }
