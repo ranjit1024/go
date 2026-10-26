@@ -24,7 +24,7 @@ func demo_mutex() {
 
 	doIncrement := func(name string, n int) {
 		for range n {
-			c.inc("a")
+			c.inc(name)
 		}
 	}
 
