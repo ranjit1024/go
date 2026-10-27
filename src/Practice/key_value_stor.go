@@ -46,11 +46,17 @@ func key_value_store() {
 					resp: make(chan int),
 				}
 				reads <- read
-				<-read.resp
-
+				value := <-read.resp
+				fmt.Println(value)
 			}
 		}()
 	}
 
+	for range 10 {
+		defer wg.Done()
+		go func() {
+
+		}()
+	}
 	fmt.Println("heelo World...")
 }
