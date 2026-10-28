@@ -4,6 +4,6 @@ import "fmt"
 
 func main() {
 	fmt.Println("---------------- Main ---------------------")
-	sorting_by_funcion()
+	recover_demo()
 	fmt.Println("-------------------End-------------------------")
 }
