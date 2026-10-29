@@ -4,6 +4,6 @@ import "fmt"
 
 func main() {
 	fmt.Println("---------------- Main ---------------------")
-	recover_demo()
+	string_func()
 	fmt.Println("-------------------End-------------------------")
 }
