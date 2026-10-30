@@ -1,13 +1,13 @@
 package main
+
 import "fmt"
 
-func demo_channel(){
+func demo_channel() {
 	message := make(chan string)
 	go func() {
 		message <- "Ping"
 	}()
-	msg := <- message
+	msg := <-message
 	fmt.Println(msg)
 	fmt.Println("Hello World...")
 }
-

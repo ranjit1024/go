@@ -1,20 +1,21 @@
 package main
+
 import (
 	"fmt"
 	"time"
 )
 
-func demo_timeout(){
+func demo_timeout() {
 	c1 := make(chan string, 1)
-	go func(){
+	go func() {
 		time.Sleep(2 * time.Second)
 		c1 <- "result 1"
 	}()
 
-	select{
-	case res := <- c1:
+	select {
+	case res := <-c1:
 		fmt.Println(res)
-	case <- time.After(1 * time.Second):
+	case <-time.After(1 * time.Second):
 		fmt.Println("Timeout 1")
 	}
 
