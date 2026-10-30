@@ -8,7 +8,6 @@ import (
 var p = fmt.Println
 
 func string_func() {
-	fmt.Println(p)
 	p("Contains:  ", s.Contains("test", "es"))
 	p("Count:     ", s.Count("test", "t"))
 	p("HasPrefix: ", s.HasPrefix("test", "te"))
