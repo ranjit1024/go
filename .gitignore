@@ -1,2 +1,20 @@
-pkg
-bin
+# Build artifacts
+/bin/
+/pkg/
+*.exe
+*.test
+*.out
+
+# Go workspace files
+go.work
+go.work.sum
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editors
+.idea/
+.vscode/
+*.swp
+*~
