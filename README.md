@@ -10,14 +10,24 @@ Go modules.
 ├── docs/                  # Notes, exercises, and roadmap
 ├── src/
 │   ├── Concepts/          # Topic-by-topic Go concept demos
+│   │   ├── basics/
+│   │   ├── functions/
+│   │   ├── collections/
+│   │   ├── structs/
+│   │   ├── errors/
+│   │   ├── generics/
+│   │   ├── concurrency/
+│   │   ├── time/
+│   │   ├── sorting/
+│   │   └── internal/runner/
 │   └── Practice/          # Practice exercises and mini projects
 ├── Makefile
 └── README.md
 ```
 
-Each module has its own `go.mod` and `main.go`. The `main.go` file selects the
-demo or exercise that is currently being explored; the remaining files provide
-the implementations.
+Both modules have their own `go.mod`. `Concepts` is split into topic packages;
+each package lists its demos and can run them by name. `Practice` keeps its
+exercises in a single package selected by `main.go`.
 
 ## Requirements
 
@@ -37,12 +47,23 @@ cd src/Concepts && go run .
 cd src/Practice && go run .
 ```
 
+List and run individual concept demos:
+
+```bash
+cd src/Concepts
+go run ./concurrency              # list demos in the category
+go run ./concurrency select       # run one demo
+go run ./basics variables loops   # run several demos
+
+make run-concept CATEGORY=concurrency DEMO=select
+```
+
 ## Development tasks
 
 ```bash
 make fmt      # format Go sources
-make vet      # run go vet on both modules
-make build    # build both modules into bin/
+make vet      # run go vet on all packages
+make build    # build all packages and binaries into bin/
 make clean    # remove build artifacts
 ```
 
