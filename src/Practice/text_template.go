@@ -2,14 +2,13 @@ package main
 
 import (
 	"fmt"
+	"os"
 	"text/template"
 )
 
 func text_template() {
-	t1 := template.New("t1")
-	t1, err := t1.Parse("Valeu is {{.}}\n")
-	if err != nil {
-		panic(err)
-	}
+	tmp1 := `Hello {{.}} Welcome to go`
+	t := template.Must(template.New("Welcome").Parse(tmp1))
+	t.Execute(os.Stdout, "Ranjit")
 	fmt.Println("Hello World...")
 }
