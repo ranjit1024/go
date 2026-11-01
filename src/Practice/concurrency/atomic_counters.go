@@ -6,7 +6,7 @@ import (
 	"sync/atomic"
 )
 
-func Demo_automic_counter() {
+func demoAtomicCounters() {
 	var ops atomic.Uint64
 
 	var wg sync.WaitGroup
