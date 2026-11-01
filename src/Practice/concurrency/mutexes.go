@@ -16,7 +16,7 @@ func (c *Container) inc(name string) {
 	c.countrs[name]++
 }
 
-func demo_mutex() {
+func demoMutexes() {
 	c := Container{
 		countrs: map[string]int{"a": 1, "b": 0},
 	}
