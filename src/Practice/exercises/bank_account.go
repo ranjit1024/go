@@ -40,7 +40,7 @@ func (a *Account) GetBalance() int {
 	return a.Balance
 }
 
-func III() {
+func demoBankAccount() {
 	acc1 := Account{
 		Id:      1,
 		Name:    "Ranjit",
