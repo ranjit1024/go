@@ -53,3 +53,11 @@ go run ./concurrency channels select # run one or more demos
 | `rate-limiting` | [rate_limiting.go](concurrency/rate_limiting.go) | Rate limiting |
 | `rate-limiting-burst` | [rate_limiting_burst.go](concurrency/rate_limiting_burst.go) | Burst rate limiting |
 | `key-value-store` | [key_value_store.go](concurrency/key_value_store.go) | Channel-based key-value store |
+
+### Errors
+
+| Demo | File | Description |
+| --- | --- | --- |
+| `errors` | [errors.go](errors/errors.go) | Returning and handling errors |
+| `custom-errors` | [custom_errors.go](errors/custom_errors.go) | Custom error types with `errors.As` |
+| `recover` | [recover.go](errors/recover.go) | Recovering from panics |
