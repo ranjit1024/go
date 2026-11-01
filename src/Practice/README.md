@@ -76,3 +76,9 @@ go run ./concurrency channels select # run one or more demos
 | --- | --- | --- |
 | `generics` | [generics.go](generics/generics.go) | Generic helpers |
 | `iterators` | [iterators.go](generics/iterators.go) | Range-over-func iterators |
+
+### Sorting
+
+| Demo | File | Description |
+| --- | --- | --- |
+| `sorting-by-function` | [sorting_by_function.go](sorting/sorting_by_function.go) | Sorting with comparison functions |
