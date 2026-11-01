@@ -7,11 +7,27 @@ type ServerState int
 const (
 	Pending ServerState = iota
 	Running
-	Stoped
+	Stopped
 	Retry
 )
 
-func enum_demo() {
+func (s ServerState) String() string {
+	switch s {
+	case Pending:
+		return "pending"
+	case Running:
+		return "running"
+	case Stopped:
+		return "stopped"
+	case Retry:
+		return "retry"
+	default:
+		return "unknown"
+	}
+}
 
-	fmt.Println("Data is the keys", Pending)
+func demoEnums() {
+	for _, state := range []ServerState{Pending, Running, Stopped, Retry} {
+		fmt.Println(state)
+	}
 }
