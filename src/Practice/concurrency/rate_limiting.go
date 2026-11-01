@@ -5,7 +5,7 @@ import (
 	"time"
 )
 
-func rate_limter() {
+func demoRateLimiting() {
 	requests := make(chan int, 5)
 
 	for i := 1; i <= 5; i++ {
