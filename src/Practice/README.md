@@ -82,3 +82,10 @@ go run ./concurrency channels select # run one or more demos
 | Demo | File | Description |
 | --- | --- | --- |
 | `sorting-by-function` | [sorting_by_function.go](sorting/sorting_by_function.go) | Sorting with comparison functions |
+
+### Strings
+
+| Demo | File | Description |
+| --- | --- | --- |
+| `strings` | [strings.go](strings/strings.go) | String functions |
+| `regex` | [regex.go](strings/regex.go) | Regular expressions |
