@@ -103,3 +103,11 @@ go run ./concurrency channels select # run one or more demos
 | Demo | File | Description |
 | --- | --- | --- |
 | `text-template` | [templates.go](templates/templates.go) | Text templates |
+
+### Time
+
+| Demo | File | Description |
+| --- | --- | --- |
+| `timers` | [timers.go](time/timers.go) | Timers |
+| `tickers` | [tickers.go](time/tickers.go) | Tickers |
+| `timeouts` | [timeouts.go](time/timeouts.go) | Timeouts |
