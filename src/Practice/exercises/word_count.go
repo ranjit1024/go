@@ -6,22 +6,15 @@ import (
 )
 
 func countWords(text string) map[string]int {
-	res := make(map[string]int)
-	words := strings.Split(text, " ")
-	fmt.Println(words)
-
-	for i := range len(words) {
-		word := words[i]
-		res[word]++
+	counts := make(map[string]int)
+	for _, word := range strings.Fields(text) {
+		counts[word]++
 	}
-	fmt.Println(res)
-	return res
+	return counts
 }
 
 func demoWordCount() {
 	text := "go is simple and go is powerful and go is fast"
 	fmt.Println(text)
-	countWords(text)
-	fmt.Println("Data is the oil")
-
+	fmt.Println(countWords(text))
 }
