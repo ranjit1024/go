@@ -6,9 +6,11 @@ import (
 	"text/template"
 )
 
-func text_template() {
-	tmp1 := `Hello {{.}} Welcome to go`
-	t := template.Must(template.New("Welcome").Parse(tmp1))
-	t.Execute(os.Stdout, "Ranjit")
-	fmt.Println("Hello World...")
+func demoTextTemplate() {
+	text := `Hello {{.}} Welcome to go`
+	t := template.Must(template.New("welcome").Parse(text))
+	if err := t.Execute(os.Stdout, "Ranjit"); err != nil {
+		fmt.Println("template error:", err)
+	}
+	fmt.Println()
 }
