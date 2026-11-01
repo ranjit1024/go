@@ -15,7 +15,7 @@ type write_op struct {
 	resp chan bool
 }
 
-func key_value_store() {
+func demoKeyValueStore() {
 	reads := make(chan read_op)
 	writes := make(chan write_op)
 	//first one is done
