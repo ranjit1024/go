@@ -5,7 +5,7 @@ import (
 	"time"
 )
 
-func select_demo() {
+func demoSelect() {
 	c1 := make(chan string)
 	c2 := make(chan string)
 
