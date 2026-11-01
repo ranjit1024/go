@@ -5,7 +5,7 @@ import (
 	"time"
 )
 
-func demo_timeout() {
+func demoTimeouts() {
 	c1 := make(chan string, 1)
 	go func() {
 		time.Sleep(2 * time.Second)
