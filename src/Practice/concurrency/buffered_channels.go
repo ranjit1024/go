@@ -3,10 +3,13 @@ package main
 import "fmt"
 
 func demoBufferedChannels() {
-	message := make(chan string, 2)
-	message <- "Hellow"
-	message <- "Workld"
-	message <- "Ranjit"
-	fmt.Println("Hello world..")
+	messages := make(chan string, 3)
+	messages <- "Hello"
+	messages <- "World"
+	messages <- "Ranjit"
+	close(messages)
 
+	for message := range messages {
+		fmt.Println(message)
+	}
 }
