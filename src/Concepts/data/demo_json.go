@@ -5,17 +5,17 @@ import (
 	"fmt"
 )
 
-type reponse1 struct {
-	Page   int
-	Fruits []string
-}
-type reposen2 struct {
-	Page   int      `json:"page"`
-	Fruits []string `json:"fruits"`
+type user struct {
+	Name string `json:"name"`
+	Age  int    `json:age`
 }
 
 func demo_json() {
-	bolB, _ := json.Marshal(true)
-	fmt.Println(string(bolB))
-	fmt.Println("Hello World...")
+	var user user
+	data := []byte(`{"name":"Ranjit", "age":23}`)
+	err := json.Unmarshal(data, &user)
+	if err != nil {
+		fmt.Println(err)
+	}
+	fmt.Println(user)
 }
