@@ -24,7 +24,7 @@ func div(a, b int) (int, error) {
 	return a / b, nil
 }
 
-func custom_error() {
+func demoCustomErrors() {
 	_, err := div(12, 0)
 	var ae *divError
 	if errors.As(err, &ae) {
