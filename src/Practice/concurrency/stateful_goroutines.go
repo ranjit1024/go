@@ -18,7 +18,7 @@ type writeOp struct {
 	resp chan bool
 }
 
-func SG() {
+func demoStatefulGoroutines() {
 	var readOps uint64
 	var writeOps uint64
 
