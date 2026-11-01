@@ -11,7 +11,7 @@ func divide(a, b int) (int, error) {
 	}
 	return a / b, nil
 }
-func error_demo() {
+func demoErrors() {
 	res, err := divide(12, 12)
 	fmt.Println(res)
 	fmt.Println(err)
