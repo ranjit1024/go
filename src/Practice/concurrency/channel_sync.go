@@ -5,16 +5,16 @@ import (
 	"time"
 )
 
-func worker(done chan bool) {
+func syncWorker(done chan bool) {
 	fmt.Println("Working....")
 	time.Sleep(time.Second)
 	fmt.Println("done")
 	done <- true
 }
 
-func demo_sync_channel() {
+func demoChannelSync() {
 	status := make(chan bool, 1)
-	go worker(status)
+	go syncWorker(status)
 
 	stat := <-status
 	fmt.Println(stat)
