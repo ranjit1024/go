@@ -61,3 +61,11 @@ go run ./concurrency channels select # run one or more demos
 | `errors` | [errors.go](errors/errors.go) | Returning and handling errors |
 | `custom-errors` | [custom_errors.go](errors/custom_errors.go) | Custom error types with `errors.As` |
 | `recover` | [recover.go](errors/recover.go) | Recovering from panics |
+
+### Exercises
+
+| Demo | File | Description |
+| --- | --- | --- |
+| `grades` | [grades.go](exercises/grades.go) | Student grade analyzer |
+| `word-count` | [word_count.go](exercises/word_count.go) | Word frequency counter |
+| `bank-account` | [bank_account.go](exercises/bank_account.go) | Concurrent bank account |
