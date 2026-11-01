@@ -21,13 +21,22 @@ Go modules.
 │   │   ├── sorting/
 │   │   └── internal/runner/
 │   └── Practice/          # Practice exercises and mini projects
+│       ├── concurrency/
+│       ├── errors/
+│       ├── exercises/
+│       ├── generics/
+│       ├── sorting/
+│       ├── strings/
+│       ├── structs/
+│       ├── templates/
+│       ├── time/
+│       └── internal/runner/
 ├── Makefile
 └── README.md
 ```
 
-Both modules have their own `go.mod`. `Concepts` is split into topic packages;
-each package lists its demos and can run them by name. `Practice` keeps its
-exercises in a single package selected by `main.go`.
+Both modules have their own `go.mod` and are split into topic packages; each
+package lists its demos and can run them by name.
 
 ## Requirements
 
@@ -56,6 +65,16 @@ go run ./concurrency select       # run one demo
 go run ./basics variables loops   # run several demos
 
 make run-concept CATEGORY=concurrency DEMO=select
+```
+
+List and run individual practice demos:
+
+```bash
+cd src/Practice
+go run ./concurrency                 # list demos in the category
+go run ./concurrency channels select # run one or more demos
+
+make run-practice-demo PRACTICE_CATEGORY=concurrency PRACTICE_DEMO=select
 ```
 
 ## Development tasks
