@@ -7,26 +7,27 @@ import (
 
 func demoRateLimitingBurst() {
 	jobs := make(chan int, 10)
-	for i := range 10 {
+	for i := 1; i <= 10; i++ {
 		jobs <- i
 	}
 	close(jobs)
 
-	b_rate_limimter := make(chan time.Time, 3)
-
+	burstLimiter := make(chan time.Time, 3)
 	for range 3 {
-		b_rate_limimter <- time.Now()
+		burstLimiter <- time.Now()
 	}
 
+	ticker := time.NewTicker(time.Second)
+	defer ticker.Stop()
+
 	go func() {
-		for t := range time.Tick(time.Second) {
-			b_rate_limimter <- t
+		for tick := range ticker.C {
+			burstLimiter <- tick
 		}
 	}()
 
 	for job := range jobs {
-		<-b_rate_limimter
-		fmt.Println("Processing job", job, "at", time.Now())
+		<-burstLimiter
+		fmt.Println("processing job", job, "at", time.Now())
 	}
-
 }
