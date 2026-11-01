@@ -89,3 +89,11 @@ go run ./concurrency channels select # run one or more demos
 | --- | --- | --- |
 | `strings` | [strings.go](strings/strings.go) | String functions |
 | `regex` | [regex.go](strings/regex.go) | Regular expressions |
+
+### Structs
+
+| Demo | File | Description |
+| --- | --- | --- |
+| `enums` | [enums.go](structs/enums.go) | Enum-style constants |
+| `interfaces` | [interfaces.go](structs/interfaces.go) | Interfaces and dynamic dispatch |
+| `embedding` | [embedding.go](structs/embedding.go) | Embedded structs |
