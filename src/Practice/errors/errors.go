@@ -6,14 +6,16 @@ import (
 )
 
 func divide(a, b int) (int, error) {
-	if a == 0 {
-		return -1, errors.New("Can not devide by 0")
+	if b == 0 {
+		return -1, errors.New("cannot divide by zero")
 	}
 	return a / b, nil
 }
+
 func demoErrors() {
 	res, err := divide(12, 12)
-	fmt.Println(res)
-	fmt.Println(err)
-	fmt.Println("Hellow World...")
+	fmt.Println(res, err)
+
+	res, err = divide(12, 0)
+	fmt.Println(res, err)
 }
