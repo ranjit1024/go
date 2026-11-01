@@ -5,7 +5,7 @@ import (
 	"time"
 )
 
-func brust_limit() {
+func demoRateLimitingBurst() {
 	jobs := make(chan int, 10)
 	for i := range 10 {
 		jobs <- i
