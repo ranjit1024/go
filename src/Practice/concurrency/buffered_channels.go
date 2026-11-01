@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func demo_b_channel() {
+func demoBufferedChannels() {
 	message := make(chan string, 2)
 	message <- "Hellow"
 	message <- "Workld"
