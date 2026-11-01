@@ -5,16 +5,16 @@ import (
 	"time"
 )
 
-func f(from string) {
+func printSequence(from string) {
 	for i := range 3 {
 		fmt.Println(from, ":", i)
 	}
 }
-func demo_goroutine() {
+func demoGoroutines() {
 	go func(msg string) {
 		fmt.Println(msg)
 	}("Hellow World...")
-	go f("Goroutine")
+	go printSequence("Goroutine")
 	time.Sleep(time.Second)
 	fmt.Println("Hellow World")
 
