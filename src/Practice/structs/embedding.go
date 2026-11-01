@@ -15,13 +15,11 @@ type container struct {
 	str string
 }
 
-func demo_struct_embeding() {
-	co := container{
-		base: base{
-			num: 1,
-		},
-		str: "Sammmmu",
+func demoEmbedding() {
+	c := container{
+		base: base{num: 1},
+		str:  "Ranjit",
 	}
-	fmt.Println(co)
-	fmt.Println("hello World....")
+	fmt.Println(c)
+	fmt.Println(c.describe())
 }
