@@ -69,3 +69,10 @@ go run ./concurrency channels select # run one or more demos
 | `grades` | [grades.go](exercises/grades.go) | Student grade analyzer |
 | `word-count` | [word_count.go](exercises/word_count.go) | Word frequency counter |
 | `bank-account` | [bank_account.go](exercises/bank_account.go) | Concurrent bank account |
+
+### Generics
+
+| Demo | File | Description |
+| --- | --- | --- |
+| `generics` | [generics.go](generics/generics.go) | Generic helpers |
+| `iterators` | [iterators.go](generics/iterators.go) | Range-over-func iterators |
