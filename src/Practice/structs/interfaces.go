@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-type verical interface {
+type vehicle interface {
 	wheel() int
 }
 
@@ -22,15 +22,11 @@ func (b bike) wheel() int {
 	return 2
 }
 
-func wheels(v verical) {
-	fmt.Println(v)
-	fmt.Println(v.wheel())
+func wheels(v vehicle) {
+	fmt.Printf("%T has %d wheels\n", v, v.wheel())
 }
 
-func interface_demo() {
-	b := bike{
-		move: true,
-	}
-	wheels(b)
-	fmt.Println("Understanding Interface")
+func demoInterfaces() {
+	wheels(car{move: true})
+	wheels(bike{move: true})
 }
