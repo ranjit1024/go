@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func demo_channel() {
+func demoChannels() {
 	message := make(chan string)
 	go func() {
 		message <- "Ping"
