@@ -1,14 +1,19 @@
-.PHONY: help run-concepts run-concept run-practice fmt vet build clean
+.PHONY: help run-concepts run-concept run-practice run-practice-demo fmt vet build clean
 
 CATEGORY ?= basics
 DEMO ?=
+PRACTICE_CATEGORY ?= concurrency
+PRACTICE_DEMO ?=
 
 help:
 	@echo "Usage:"
 	@echo "  make run-concepts   Show the concepts category menu"
 	@echo "  make run-concept    Run a concept demo"
 	@echo "                      e.g. make run-concept CATEGORY=concurrency DEMO=select"
-	@echo "  make run-practice   Run the practice module"
+	@echo "  make run-practice   Show the practice category menu"
+	@echo "  make run-practice-demo"
+	@echo "                      Run a practice demo"
+	@echo "                      e.g. make run-practice-demo PRACTICE_CATEGORY=concurrency PRACTICE_DEMO=select"
 	@echo "  make fmt            Format Go sources"
 	@echo "  make vet            Run go vet on both modules"
 	@echo "  make build          Build all packages and binaries"
@@ -22,6 +27,9 @@ run-concept:
 
 run-practice:
 	cd src/Practice && go run .
+
+run-practice-demo:
+	cd src/Practice && go run ./$(PRACTICE_CATEGORY) $(PRACTICE_DEMO)
 
 fmt:
 	gofmt -w src/Concepts src/Practice
