@@ -32,3 +32,24 @@ go run ./concurrency channels select # run one or more demos
 ```
 
 ## Index
+
+### Concurrency
+
+| Demo | File | Description |
+| --- | --- | --- |
+| `goroutines` | [goroutines.go](concurrency/goroutines.go) | Starting goroutines |
+| `channels` | [channels.go](concurrency/channels.go) | Channel basics |
+| `buffered-channels` | [buffered_channels.go](concurrency/buffered_channels.go) | Buffered channels |
+| `channel-sync` | [channel_sync.go](concurrency/channel_sync.go) | Using channels to synchronize |
+| `channel-directions` | [channel_directions.go](concurrency/channel_directions.go) | Send-only and receive-only channels |
+| `closing-channels` | [closing_channels.go](concurrency/closing_channels.go) | Closing channels and ranging over them |
+| `non-blocking` | [non_blocking_channels.go](concurrency/non_blocking_channels.go) | Non-blocking channel operations |
+| `select` | [select.go](concurrency/select.go) | Waiting on multiple channels |
+| `wait-groups` | [wait_groups.go](concurrency/wait_groups.go) | Waiting for goroutines |
+| `mutexes` | [mutexes.go](concurrency/mutexes.go) | Mutual exclusion |
+| `atomic-counters` | [atomic_counters.go](concurrency/atomic_counters.go) | Atomic counters |
+| `stateful-goroutines` | [stateful_goroutines.go](concurrency/stateful_goroutines.go) | State owned by a goroutine |
+| `worker-pools` | [worker_pools.go](concurrency/worker_pools.go) | Worker pools |
+| `rate-limiting` | [rate_limiting.go](concurrency/rate_limiting.go) | Rate limiting |
+| `rate-limiting-burst` | [rate_limiting_burst.go](concurrency/rate_limiting_burst.go) | Burst rate limiting |
+| `key-value-store` | [key_value_store.go](concurrency/key_value_store.go) | Channel-based key-value store |
