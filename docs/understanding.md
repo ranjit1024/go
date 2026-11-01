@@ -103,3 +103,20 @@ func main(){
 ## Go Json Encoding and decoding 
 convering Go object ot json 
 and converting Json object to Go onject
+
+the way you can do it is that 
+using 
+>json.Marshal(12)
+and 
+>Json.Unmarchal(&user)
+```go
+package main
+import "fmt"
+
+func main(){
+    Json.Marchal(12)
+    Json.Unmarshal(data , &user)
+    
+}
+```
+and this taking the json and then convert into go object 
