@@ -4,6 +4,6 @@ import "fmt"
 
 func main() {
 	fmt.Println("---------------- Main ---------------------")
-	text_template()
+	demo_regex()
 	fmt.Println("-------------------End-------------------------")
 }
