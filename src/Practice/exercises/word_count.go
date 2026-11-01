@@ -18,7 +18,7 @@ func countWords(text string) map[string]int {
 	return res
 }
 
-func Second() {
+func demoWordCount() {
 	text := "go is simple and go is powerful and go is fast"
 	fmt.Println(text)
 	countWords(text)
