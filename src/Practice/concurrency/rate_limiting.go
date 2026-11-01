@@ -11,33 +11,13 @@ func demoRateLimiting() {
 	for i := 1; i <= 5; i++ {
 		requests <- i
 	}
-
 	close(requests)
 
-	limiter := time.Tick(200 * time.Millisecond)
+	limiter := time.NewTicker(200 * time.Millisecond)
+	defer limiter.Stop()
 
 	for req := range requests {
-		<-limiter
-		fmt.Println("Req", req, time.Now())
+		<-limiter.C
+		fmt.Println("request", req, time.Now())
 	}
-
-	brustyLimiter := make(chan time.Time, 3)
-
-	for range 3 {
-		brustyLimiter <- time.Now()
-	}
-
-	go func() {
-		for t := range time.Tick(200 * time.Millisecond) {
-			brustyLimiter <- t
-		}
-	}()
-
-	brustyRequest := make(chan int, 5)
-
-	for i := 1; i <= 5; i++ {
-		brustyRequest <- i
-	}
-
-	fmt.Println("Hello World")
 }
