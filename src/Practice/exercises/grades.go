@@ -5,7 +5,7 @@ import (
 )
 
 // / stuende grade analuzer
-func first() {
+func demoGrades() {
 	scores := []int{56, 99, 34, 23, 90, 34}
 
 	h_n := scores[0]
