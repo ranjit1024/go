@@ -97,3 +97,9 @@ go run ./concurrency channels select # run one or more demos
 | `enums` | [enums.go](structs/enums.go) | Enum-style constants |
 | `interfaces` | [interfaces.go](structs/interfaces.go) | Interfaces and dynamic dispatch |
 | `embedding` | [embedding.go](structs/embedding.go) | Embedded structs |
+
+### Templates
+
+| Demo | File | Description |
+| --- | --- | --- |
+| `text-template` | [templates.go](templates/templates.go) | Text templates |
