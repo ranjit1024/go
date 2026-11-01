@@ -18,11 +18,9 @@ type write_op struct {
 func demoKeyValueStore() {
 	reads := make(chan read_op)
 	writes := make(chan write_op)
-	//first one is done
-	go func() {
-		state := map[string]int{
-			"apple": 10}
 
+	go func() {
+		state := map[string]int{"apple": 10}
 		for {
 			select {
 			case read := <-reads:
@@ -33,30 +31,28 @@ func demoKeyValueStore() {
 			}
 		}
 	}()
+
 	var wg sync.WaitGroup
-	wg.Add(2)
-
-	for range 100 {
-
-		go func() {
-			defer wg.Done()
-			for {
-				read := read_op{
-					key:  "apple",
-					resp: make(chan int),
-				}
+	for range 5 {
+		wg.Go(func() {
+			for range 3 {
+				read := read_op{key: "apple", resp: make(chan int)}
 				reads <- read
-				value := <-read.resp
-				fmt.Println(value)
+				fmt.Println("apple =", <-read.resp)
 			}
-		}()
+		})
 	}
 
-	for range 10 {
-		defer wg.Done()
-		go func() {
-
-		}()
+	for i := range 5 {
+		wg.Go(func() {
+			write := write_op{key: "apple", val: i + 1, resp: make(chan bool)}
+			writes <- write
+			<-write.resp
+		})
 	}
-	fmt.Println("heelo World...")
+	wg.Wait()
+
+	final := read_op{key: "apple", resp: make(chan int)}
+	reads <- final
+	fmt.Println("final apple =", <-final.resp)
 }
