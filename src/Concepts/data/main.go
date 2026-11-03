@@ -9,5 +9,6 @@ func main() {
 		"test":   epoch_demo,
 		"time":   time_formatiing,
 		"number": r_number,
+		"parse":  parse_number,
 	})
 }
