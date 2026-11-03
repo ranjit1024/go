@@ -7,5 +7,6 @@ func main() {
 		"json": demo_json,
 		"xml":  demo_xml,
 		"test": epoch_demo,
+		"time": time_formatiing,
 	})
 }
