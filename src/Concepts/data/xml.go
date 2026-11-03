@@ -17,5 +17,8 @@ func (p Plant) String() string {
 }
 func demo_xml() {
 	fmt.Println("Hello World...")
-	// coffee := &Plant{Id: 12, Name: "Coffee"}
+
+	coffee := &Plant{Id: 12, Name: "Coffee"}
+	coffee.Origin = []string{"Brazil", "Amarican"}
+
 }
