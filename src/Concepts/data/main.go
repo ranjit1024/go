@@ -10,5 +10,6 @@ func main() {
 		"time":   time_formatiing,
 		"number": r_number,
 		"parse":  parse_number,
+		"url":    url_parsing,
 	})
 }
