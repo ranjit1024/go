@@ -5,7 +5,7 @@ import (
 	"fmt"
 )
 
-func main() {
+func demo_sha() {
 	s := "Sha256 this string"
 	h := sha256.New()
 	h.Write([]byte(s))
