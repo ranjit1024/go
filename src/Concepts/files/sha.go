@@ -15,5 +15,10 @@ func demo_sha() {
 	fmt.Printf("%x \n", bs)
 	fmt.Println("Hello World....")
 	// ----------- Number pasing-------------
-	strconv.ParseInt("12", 2, 64)
+	n, err := strconv.ParseInt("1010", 2, 64)
+	if err != nil {
+		panic("incorret data")
+	} //
+
+	fmt.Println(n)
 }
