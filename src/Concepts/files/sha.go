@@ -3,6 +3,7 @@ package main
 import (
 	"crypto/sha256"
 	"fmt"
+	"strconv"
 )
 
 func demo_sha() {
@@ -13,4 +14,6 @@ func demo_sha() {
 	fmt.Println(s)
 	fmt.Printf("%x \n", bs)
 	fmt.Println("Hello World....")
+	// ----------- Number pasing-------------
+	strconv.ParseInt("12", 2, 64)
 }
