@@ -3,7 +3,6 @@ package main
 import (
 	"crypto/sha256"
 	"fmt"
-	"strconv"
 )
 
 func demo_sha() {
@@ -14,11 +13,4 @@ func demo_sha() {
 	fmt.Println(s)
 	fmt.Printf("%x \n", bs)
 	fmt.Println("Hello World....")
-	// ----------- Number pasing-------------
-	n, err := strconv.ParseInt("1010", 2, 64)
-	if err != nil {
-		panic("incorret data")
-	} //
-
-	fmt.Println(n)
 }
