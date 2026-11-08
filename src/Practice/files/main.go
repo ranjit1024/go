@@ -9,5 +9,6 @@ func main() {
 	fmt.Println("fadfa")
 	runner.Run(map[string]func(){
 		"number": number_demo,
+		"file":   read_file,
 	})
 }
