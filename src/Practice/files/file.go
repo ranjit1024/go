@@ -2,12 +2,19 @@ package main
 
 import (
 	"fmt"
-	"path/filepath"
+	"os"
 )
 
+func check(e error) {
+	if e != nil {
+		panic(e)
+	}
+}
+
 func read_file() {
-	path := filepath.Join("tmp", "a.txt")
-	fmt.Println(path)
-	fmt.Println("Hello World")
+	data, err := os.ReadFile("tmp/a.txt")
+	check(err)
+	content := string(data)
+	fmt.Println(content)
 
 }
