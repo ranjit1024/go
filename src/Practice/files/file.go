@@ -1,6 +1,7 @@
 package main
 
 import (
+	"bufio"
 	"fmt"
 	"os"
 )
@@ -12,9 +13,11 @@ func check(e error) {
 }
 
 func read_file() {
-	data, err := os.ReadFile("tmp/a.txt")
+	data, err := os.Open("tmp/a.txt")
 	check(err)
-	content := string(data)
-	fmt.Println(content)
-
+	scanner := bufio.NewScanner(data)
+	for scanner.Scan() {
+		line := scanner.Text()
+		fmt.Println(line)
+	}
 }
