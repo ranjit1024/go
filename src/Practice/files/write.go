@@ -1,9 +1,11 @@
 package main
 
-import "fmt"
+import (
+	"os"
+)
 
-func write() {
-	d1 := []byte("Hello World...\n")
-	fmt.Println(d1)
-	fmt.Println("Hello World...")
+func write_demo() {
+	data := []byte("Hello wold\n")
+	err := os.WriteFile("./tmp/a.txt", data, 0644)
+	check(err)
 }
