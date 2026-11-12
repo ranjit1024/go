@@ -1,6 +1,7 @@
 package main
 
 import (
+	"log"
 	"os"
 )
 
@@ -23,7 +24,9 @@ func write_using_crate_and_write() {
 	)
 	check(err)
 	defer file.Close()
-	_, err := file.Write([]byte("\n New content"))
-
+	_, err = file.Write([]byte("New content"))
+	if err != nil {
+		log.Fatal(err)
+	}
 	check(err)
 }
