@@ -6,6 +6,6 @@ import (
 
 func main() {
 	runner.Run(map[string]func(){
-		"embede": embede,
+		"cmd": cmd,
 	})
 }
