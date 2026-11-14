@@ -6,7 +6,7 @@ import (
 	"os"
 )
 
-func main() {
+func subcommand() {
 	fmt.Println("Hello World...")
 	fooCmd := flag.NewFlagSet("foo", flag.ExitOnError)
 	fooEnabled := fooCmd.Bool("enable", false, "enable")
