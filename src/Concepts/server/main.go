@@ -1,7 +1,7 @@
-package server
-
-import "fmt"
+package main
 
 func main() {
-	fmt.Println("Data is good...")
+	runner(map[string]func(){
+		"env": demo_env,
+	})
 }
