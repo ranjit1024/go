@@ -1,11 +1,12 @@
 package main
 
 import (
-	"concepts/internal/runner"
+	"fmt"
+	"os"
 )
 
 func main() {
-	runner.Run(map[string]func(){
-		"cmd": cmd,
-	})
+	args := os.Args
+	fmt.Println(args)
+	fmt.Println("hello World...")
 }
