@@ -1,7 +1,9 @@
 package main
 
+import "concepts/internal/runner"
+
 func main() {
-	runner(map[string]func(){
+	runner.Run(map[string]func(){
 		"env": demo_env,
 	})
 }
