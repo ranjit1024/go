@@ -5,7 +5,7 @@ import (
 	"fmt"
 )
 
-func flags_demon() {
+func flags_demo() {
 	fmt.Println("fadfa")
 	wordPtr := flag.String("word", "foo", "a string")
 	numPtr := flag.Int("numb", 42, "an int")
