@@ -13,4 +13,5 @@ func main() {
 		"write":       write_using_crate_and_write,
 		"line_filter": line_filter,
 	})
+	cadfkjh
 }
